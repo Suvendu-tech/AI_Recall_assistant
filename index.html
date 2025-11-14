@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Recall Assistant</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.14.305/pdf.min.js"></script>
+</head>
+
+<body class="light">
+
+  <nav class="navbar glass">
+    <h2>AI Recall Assistant</h2>
+
+    <div class="nav-actions">
+      <button id="darkToggle">🌙</button>
+      <a href="login.html"><button class="logout">Logout</button></a>
+    </div>
+  </nav>
+
+  <div class="container glass">
+    <h3>Upload Notes (PDF/Text)</h3>
+
+    <input type="file" id="pdfUpload" accept="application/pdf" />
+
+    <textarea id="inputText" placeholder="Or type your notes..."></textarea>
+
+    <button onclick="generateAI()">Generate with AI</button>
+  </div>
+
+  <div class="results">
+    <div class="box glass">
+      <h3>📘 Summary</h3>
+      <p id="summary"></p>
+    </div>
+
+    <div class="box glass">
+      <h3>🃏 Flashcards</h3>
+      <ul id="flashcards"></ul>
+    </div>
+
+    <div class="box glass">
+      <h3>❓ MCQs</h3>
+      <ul id="mcqs"></ul>
+    </div>
+
+    <div class="box glass">
+      <h3>⏰ Revision Schedule</h3>
+      <ul id="schedule"></ul>
+    </div>
+
+    <div class="box glass">
+      <h3>📈 Memory Progress</h3>
+      <canvas id="progressChart"></canvas>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
