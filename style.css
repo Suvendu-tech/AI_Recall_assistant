@@ -1,0 +1,89 @@
+/* GENERAL RESET */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: Poppins, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  transition: 0.4s;
+}
+
+/* LIGHT THEME */
+body.light {
+  --bg: #eef1f5;
+  --card: rgba(255,255,255,0.4);
+  --text: #111;
+  --nav: rgba(255,255,255,0.6);
+}
+
+/* DARK THEME */
+body.dark {
+  --bg: #121212;
+  --card: rgba(20,20,20,0.55);
+  --text: #fff;
+  --nav: rgba(30,30,30,0.6);
+}
+
+.glass {
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 14px;
+  padding: 20px;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background: var(--nav);
+  margin-bottom: 20px;
+}
+
+/* INPUT & TEXTAREA */
+textarea, input {
+  width: 100%;
+  padding: 12px;
+  margin-top: 12px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+}
+
+/* AUTH PAGES */
+.auth-container {
+  width: 350px;
+  margin: 120px auto;
+  text-align: center;
+}
+
+/* RESULTS GRID */
+.results {
+  display: grid;
+  gap: 20px;
+  padding: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+/* BUTTONS */
+button {
+  padding: 12px 20px;
+  background: #4a6cf7;
+  border: none;
+  color: white;
+  border-radius: 8px;
+  margin-top: 12px;
+  cursor: pointer;
+}
+
+button:hover { background: #3453c6; }
+
+/* Fade animation */
+.box, .container, .auth-container {
+  animation: fadeIn 0.6s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
